@@ -1,0 +1,77 @@
+.MyPage_main{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.MyPageBox_div{
+    display: flex;
+    width: 60%;
+    height: 500px;
+    box-shadow: 0px 0px 20px lightgray;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    font-size: 2rem;
+    padding: 5%;
+}
+
+.Profile_div{
+    width: 30%;
+}
+
+.Profile_div span{
+    font-weight: 700;
+}
+
+.Profile_div-img{
+    width: 50%;
+    padding: 5%;
+}
+
+.Detail_div{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.Detail_div-cardName{
+    font-weight: 700;
+    padding-bottom: 2%;
+}
+
+.Detail_div-card{
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+    padding: 5%;
+    margin-top: 5%;
+    box-shadow: 0 0 5px lightgray;
+    border-radius: 10px;
+}
+
+.Detailcard_div p{
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.mypage_div-natioincard{
+    margin-top: 15%;
+}
+
+.mypage_div-natioincard span{
+    font-size: 1.2rem;
+    color: darkgray;
+    font-weight: 600;
+}
+
+.mypage_nationcard_div{
+    width: fit-content;
+    padding: 5%;
+    box-shadow: 0 0 5px lightgray;
+    border-radius: 10px;
+    margin-top: 5%;
+}

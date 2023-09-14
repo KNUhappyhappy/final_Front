@@ -1,0 +1,399 @@
+.MainPage {
+  width: 100%;
+  height: 231rem;
+  display: inline-flex;
+  padding-left: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.MainPage span,
+.MainPage h1,
+.MainPage h2,
+.MainPage h3,
+.MainPage h4,
+.MainPage h5,
+.MainPage h6 {
+  text-align: center;
+}
+
+.MainPageInner {
+  width: 100%;
+  height: 231rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.MainPage h2 {
+  color: #5c5c5c;
+  font-weight: bold;
+  font-size: 26px;
+  padding-bottom: 25px;
+}
+
+.MainPage h5 {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+/* MainPage reset */
+
+.FadingImage {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fadeInOut {
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* fade-in fade-out 효과 */
+
+.MainSearchH1 {
+  flex-direction: column;
+  display: flex;
+  width: 30%;
+  padding-top: 3rem;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.MainSearchH1 h1 {
+  font-size: 2.8rem;
+  padding-bottom: 1.5rem;
+  color: #5c5c5c;
+}
+
+.MainSearchH1 .PageSlogan {
+  font-size: 4.4rem;
+  color: #409fff;
+}
+
+.MainSearch {
+  width: 100%;
+  height: 86rem;
+  background: linear-gradient(
+    0deg,
+    rgba(117, 186, 255, 0.51) 0%,
+    rgba(117, 186, 255, 0) 100%
+  );
+}
+
+.MainSearchInner {
+  /* 기본 width 1920px로 고정 */
+  margin: 0 auto;
+  width: 75%;
+  height: 86rem;
+  box-sizing: border-box;
+  padding: 5rem 5rem;
+}
+
+.MainSearchImg {
+  position: relative;
+  /* display: flex; */
+}
+
+.airplaneImg {
+  position: absolute;
+  top: -30px;
+  left: -10px;
+  /* width: 50%; */
+}
+
+.MainSearchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20rem;
+  position: absolute;
+  top: 26rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.MainSearhCountry {
+  width: 25%;
+  height: 7rem;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0.3rem 0.4rem 0.4rem 0.4rem rgba(89, 89, 89, 0.25);
+  background: rgba(255, 255, 255, 0.88);
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin-right: 3rem;
+}
+
+.SearchBtn {
+  width: 6%;
+  height: 7rem;
+  background: var(--main_color);
+  box-sizing: border-box;
+  /* padding: 1rem 5rem; */
+  border: none;
+  border-radius: 1.5rem;
+  display: inline-block;
+  box-shadow: 0.3rem 0.4rem 0.4rem 0.4rem rgba(89, 89, 89, 0.25);
+}
+
+.SearchBtn:hover {
+  background: #409fff;
+}
+
+.SearchBtnImg {
+  width: 30%;
+  height: 60%;
+}
+
+/* MainSearch */
+
+.MainIntro {
+  width: 100%;
+  height: 80rem;
+  /* background-color: #888; */
+}
+
+.MainIntro span {
+  color: #9a9a9a;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1rem; /* 55% */
+  letter-spacing: -0.05rem;
+}
+
+.MainIntroInner {
+  margin: 0 auto;
+  /* width: 108rem; */
+  width: 50%;
+  height: 80rem;
+  padding: 8rem 0;
+  box-sizing: border-box;
+}
+
+.MainIntroSpan {
+  margin-bottom: 6rem;
+}
+
+.MainIntroSpan h1 {
+  padding-bottom: 1rem;
+}
+
+.MainIntroBoxes {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  justify-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Box1 {
+  box-sizing: border-box;
+  border-left: 10px solid #409fff;
+}
+
+.MainIntroBox {
+  width: 92%;
+  height: 45rem;
+  border-radius: 2rem;
+  background: #f9f9f9;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 12% 6% 0% 6%;
+  overflow: hidden;
+}
+
+.MainIntroBox h3 {
+  padding-bottom: 1.5rem;
+  font-size: 2.2rem;
+  text-align: left;
+}
+
+.MainIntroBoxInner {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.3fr 1.7fr;
+}
+
+.MainIntroWarning {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 8%;
+}
+
+.MainIntroWarningContents {
+  height: 50%;
+}
+
+.MainIntroWarningImg {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.6rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  display: grid;
+  align-items: center;
+}
+
+.MainIntroWarningSpan h4 {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.MainIntroWarningSpan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  align-self: stretch;
+}
+
+.MainIntroCommunityBox {
+  margin: 2rem 0.6rem auto;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  width: 85%;
+  height: 15%;
+  padding: 3% 5%;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 1rem;
+  background: var(--background-default, #fff);
+}
+
+.MainIntroCommunityBoxIntro {
+  display: grid;
+  grid-template-rows: 1.2fr 0.8fr;
+  text-align: left;
+}
+
+.MainIntroCommunityBoxIntro h6 {
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+.AirplaneTicketImg {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  margin-top: 10rem;
+}
+
+.passportImg {
+  width: 50%;
+  height: 100%;
+  left: -10;
+}
+
+.passportImg img {
+  width: 70%;
+  position: absolute;
+  left: -5rem;
+}
+
+.ticketImg {
+  width: 50%;
+  height: 100%;
+}
+
+.ticketImg img {
+  width: 70%;
+  position: absolute;
+  top: -4rem;
+  right: -6rem;
+}
+
+/* MainIntro */
+
+.MainCountry {
+  width: 100%;
+  height: 65rem;
+  background: #fbfbfb;
+}
+
+.MainCountryInner {
+  padding: 8rem 0;
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.MainCountryIntro {
+  margin-bottom: 6rem;
+}
+
+.MainCountryIntro h1 {
+  padding-bottom: 1rem;
+}
+
+.MainCountryBoxes {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  justify-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.MainCountryBox {
+  width: 90%;
+  height: 30rem;
+  flex-shrink: 0;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.MainCountryBox img {
+  width: 100%;
+  height: 20rem;
+}
+
+.MainCountryBoxIntro {
+  display: grid;
+  grid-template-rows: 1.2fr 0.8fr;
+}
+
+.CountryName {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.CountryName span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.CountryDetailMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #9a9a9a;
+  justify-content: space-between;
+}
+
+/* 반응형 스타일 추가 */
+
+/* 중간 화면(태블릿 등)에 대한 스타일 */
+@media (min-width: 768px) and (max-width: 991px) {
+}

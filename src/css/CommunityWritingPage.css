@@ -1,0 +1,164 @@
+.CommunityWritingPage {
+  width: 100%;
+  height: 1600px;
+  display: inline-flex;
+  padding-left: 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.CommunityWritingPage button {
+  background-color: transparent;
+  color: #686868;
+  border: none;
+}
+
+.CommunityWritingPageInner {
+  width: 100%;
+  height: 1600px;
+  margin: 0 auto;
+}
+
+.CommunityWritingPage .blurred {
+  /* 등록 버튼 클릭 시 블러 효과 적용 */
+  backdrop-filter: blur(50px);
+  transition: backdrop-filter 0.3s ease; /* 효과 적용 시 스무스한 전환을 위한 트랜지션 추가 */
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* reset */
+
+.CommunityWritingBanner {
+  width: 100%;
+  height: 600px;
+}
+
+.CommunityWritingBanner span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.CommunityWritingBannerInner {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 4% 2% 0 2%;
+}
+
+.CommunityWritingPrecautions {
+  text-align: left;
+}
+
+.CommunityWritingBannerImgBox {
+  width: 100%;
+  height: 44rem;
+  margin-top: 3%;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ImgAttachBtn {
+  width: 14%;
+  height: 45px;
+  margin-top: 30px;
+  border: 1px solid #b0b0b0;
+  font-size: 14px;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CommunityWritingBanner */
+
+.CommunityWritingBox {
+  width: 100%;
+  height: 1000px;
+}
+
+.CommunityWritingBoxInner {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 3% 2%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  grid-template-rows: 1fr 1fr;
+}
+
+.CommunityWritingBoxToolBar {
+  height: 80px;
+  width: 100%;
+}
+
+.CommunityWritingBoxInner input {
+  width: 100%;
+  border: none;
+}
+
+.CommunityWritingBoxTitle {
+  border-bottom: 1px solid #dedede;
+  width: 100%;
+  height: 80px;
+}
+
+.CommunityWritingBoxTitle input {
+  height: 80px;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.CommunityWritingBoxContents {
+  width: 100%;
+  height: 600px;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+
+.CommunityWritingBoxContents input {
+  width: 100%;
+  height: 540px;
+}
+
+.CommunityWritingBoxCategory {
+  width: 100%;
+  height: 124px;
+  text-align: left;
+  font-size: 14px;
+  box-sizing: border-box;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1.7fr 0.3fr;
+}
+
+.CommunityWritingBtn button {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 70%;
+  height: 60px;
+  border-radius: 10px;
+  background: var(--main_color);
+  color: white;
+  border: none;
+}
+
+.CommunityWritingBtn button:hover {
+  background: #409fff;
+}
+
+/* CommunityWritingBox */

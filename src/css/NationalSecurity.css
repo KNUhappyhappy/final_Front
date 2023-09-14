@@ -1,0 +1,243 @@
+.nationalsecurity_main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    width: 70%;
+}
+
+.nationalsecurity_main button{
+    width: fit-content;
+    height: fit-content;
+    border: 0;
+    border-radius: 5px;
+    padding: 0.5%;
+}
+
+.nationalsecurity_main input{
+    width: 50%;
+    height: 3rem;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.searchbar_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 10px gray;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.searchbar_div p{
+    color: var(--sub_color);
+    font-weight: 700;
+}
+
+.searchbar_div button{
+    width: 15%;
+    font-weight: 700;
+}
+
+.nation_div-grid{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+    /* border: 1px solid black; */
+    width: 105%;
+    justify-items: center;
+    justify-content: center;
+    line-height: 3rem;
+    padding: 1%;
+    padding-top: 3%;
+}
+
+.nation_div-grid2{
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 100%;
+    /* border: 1px solid black; */
+    width: 105%;
+    justify-items: center;
+    justify-content: center;
+    line-height: 3rem;
+    padding: 1%;
+}
+
+.nation_div-card{
+    width: 95%;
+    max-width: 800px;
+    height: auto;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+    background-color: rgba(241, 241, 241, 0.635);
+}
+
+.nationcard_nation-div{
+    display: flex;
+    align-items: center; 
+}
+
+.nationcard_div-img{
+    width: 40%;
+    height: 100%;
+    border: 1px solid black;
+    margin-right: 2%;
+}
+
+.nation_div-information{
+    justify-content: space-around;
+}
+
+.nationcard_div-title{
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgb(117, 117, 117);
+}
+
+.nationcard_div-commu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nationcard_div{
+    padding: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+.nation_div-community{
+    padding: 3%;
+    width: 94%;
+}
+
+.nationcard_button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nationcard_button button{
+    width: 48%;
+    padding: 4%;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.nationcard_div-commu button{
+    width: 40%;
+    padding: 2%;
+}
+
+
+.alarmcard{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.alarmcard_div{
+    display: flex;
+    border-radius: 10px;
+    padding: 2%;
+    align-items: center;
+    margin: 1%;
+}
+
+.alarmcard_div-black{
+    border: 1px solid #343434;
+    background-color: rgba(52, 52, 52, 0.2);
+}
+
+.alarmcard_div-red{
+    border: 1px solid #F85640;
+    background-color: rgba(248, 86, 64, 0.2);
+}
+
+.alarmcard_div-yellow{
+    border: 1px solid #FBA63C;
+    background-color: rgba(251, 166, 60, 0.2)
+}
+
+.alarmcard_div-blue{
+    border: 1px solid #08A0F7;
+    background-color: rgba(8, 160, 247, 0.2);
+}
+
+.alarmcard_div img{
+    width: 15%;
+    margin-right: 5%;
+}
+
+.alarmcard_div div{
+    line-height: 2.5rem;
+    color: #1f1f1f;
+    font-weight: 500;
+}
+
+.alarmcard_div-title{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.commucard_button{
+    color: white;
+    font-weight: 600;
+}
+
+@media (min-width:1024px){
+    .nationalsecurity_main p{
+        font-size: 1.2rem;
+    }
+    .nation_div-grid{
+        line-height: 2.5rem;
+    }
+    .nationcard_div-title{
+        font-size: 2.5rem;
+    }
+    .alarmcard_div-title{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    .nationcard_button button{
+        width: 48%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    .nationcard_detail{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .alarmcard_div div{
+        line-height: 2rem;
+        color: #1f1f1f;
+        font-weight: 500;
+    }
+
+    .alarmcard_div img{
+        width: 10%;
+        margin-left: 3%;
+    }
+
+    
+}

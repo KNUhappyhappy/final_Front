@@ -1,0 +1,208 @@
+.CommunityDetailPage {
+  width: 100%;
+  height: 2400px;
+  display: inline-flex;
+  padding-left: 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.CommunityDetailPage button {
+  /* background-color: transparent; */
+  /* color: #686868; */
+  border: none;
+}
+
+.CommunityDetailPageInner {
+  width: 100%;
+  height: 2400px;
+  margin: 0 auto;
+}
+
+/* reset */
+
+.CommunityDetailContents {
+  width: 100%;
+  height: 1600px;
+}
+
+.CommunityDetailContentsInner {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 5% 5% 0% 5%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 0.2fr 1.8fr;
+}
+
+.CommunityDetailContentsTop {
+  display: grid;
+  grid-template-rows: 0.4fr 1.6fr 0.5fr;
+}
+
+.CommunityDetailContentsReturn {
+  text-align: left;
+  font-size: 14px;
+  color: #979797;
+}
+
+.returnBtn {
+  color: #979797;
+}
+
+.CommunityDetailContentsTitle {
+  padding: 2% 5%;
+  display: grid;
+  grid-template-columns: 0.3fr 1.8fr 0.7fr;
+  align-items: center;
+  /* flex-direction: row; */
+  text-align: left;
+}
+
+.CommunityDetailContentsCategory {
+  width: 80%;
+  height: 3.2rem;
+  margin: 0.2rem;
+  border-radius: 2rem;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1rem 1rem;
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+}
+
+.CommunityDetailContentsTitleMenuBarShare {
+  font-size: 16px;
+  color: #979797;
+  display: grid;
+  grid-template-columns: 0.3fr 0.6fr 1.2fr;
+}
+
+.dropdownMenu {
+  position: fixed;
+  width: 120px;
+  height: 50px;
+  text-align: right;
+  display: grid;
+  background-color: white;
+  border: 1px solid #c7c7c7;
+  margin: 30px 0px 0px 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.CommunityPostModify {
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.CommunityPostDelete {
+  color: #ff6565;
+}
+
+.AiOutlineMore {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.CommunityDetailContentsInfo {
+  padding: 0% 5%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: row;
+  text-align: left;
+  font-size: 14px;
+  color: #979797;
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr;
+}
+
+.CommunityDetailContentsMain {
+  box-sizing: border-box;
+  padding-top: 75px;
+}
+
+.CommunityDetailContentsMainImg1,
+.CommunityDetailContentsMainImg2 {
+  width: 70%;
+  height: 450px;
+  background-color: #979797;
+  margin: 0 auto;
+}
+
+.CommunityDetailContentsMainImg1 {
+  background: url("/public/Images/CommunityPage/CommunityDetailContentsMainImg1.png")
+    center / cover no-repeat;
+}
+
+.CommunityDetailContentsMainImg2 {
+  background: url("/public/Images/CommunityPage/CommunityDetailContentsMainImg2.png")
+    center / cover no-repeat;
+}
+
+.CommunityDetailContentsMainIntro1,
+.CommunityDetailContentsMainIntro2 {
+  margin: 50px 0px;
+}
+
+.CommunityDetailContentsMainIntro1 span,
+.CommunityDetailContentsMainIntro2 span {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* CommunityDetailContents */
+
+.CommunityDetailComments {
+  width: 100%;
+  height: 800px;
+}
+
+.CommunityDetailCommentsInner {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 5%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 0.35fr 0.35fr 0.6fr 2.7fr;
+}
+
+.CommunityDetailCommentsInputBar {
+  display: grid;
+  grid-template-columns: 0.4fr 2.2fr 0.4fr;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: row;
+  text-align: left;
+}
+
+.CommunityDetailCommentsInputBar input {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.CommentsBtn {
+  margin: 10%;
+  box-sizing: border-box;
+  width: 70%;
+  height: 40px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--main_color);
+}
+
+.CommentsBtn:hover {
+  background-color: var(--sub_color);
+}
+
+/* CommunityDetailComments */
