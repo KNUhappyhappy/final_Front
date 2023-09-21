@@ -16,6 +16,7 @@
     margin: auto;
     background-color: white;
     text-align: center;
+    position: relative;
 }
 
 .logo {
@@ -99,15 +100,11 @@ button:hover {
     border-radius: 5px;
 }
 
-.login_input {
-    background-color: #ddd;
-    height: 70px;
-    width: 80%;
-    border: 0;
-    border-radius: 5px;
-    position: relative;
-}
 
+
+/* .input_text{
+    position: absolute;
+} */
 
 .google_login{
     font-size: 5rem;
@@ -126,11 +123,29 @@ button:hover {
     color: blue;
 }
 
+.loginbox_div{
+    height: 16%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.login_input{
+    background-color: #ddd;
+    height: 70px;
+    width: 80%;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* 
 .login_input-div{
     height: 16%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-}
+} */
 

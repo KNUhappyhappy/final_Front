@@ -3,6 +3,7 @@ import "../css/Login.css"
 import "../css/common.css"
 import GoogleAuthLogin from "./GoogleAuthLogin"
 import { Link } from "react-router-dom";
+import Popup from './LoginPopup';
 
 //사용자 정보 관리 모듈
 import { createAction, handleActions } from "redux-actions";
@@ -12,6 +13,8 @@ import axios from 'axios';
 
 //id 기억하기
 import { useCookies } from 'react-cookie';
+import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
+import { Modal } from "react-bootstrap";
 
 function Login(){
 
@@ -20,6 +23,7 @@ function Login(){
     //Id 기억하기
     const [isRemember, setIsRemember] = useState(false);
     const [cookies, setCookie, removeCookie] = useCookies(['rememberId']);
+    const [Popup, setPopup] = useState(false);
 
     const [user, setUser] = useState({
         username: '',
@@ -57,19 +61,20 @@ function Login(){
             <div>
                 <p>OR</p>
             </div>
-            <div className="login_input-div">
-                    <input className="login_input" value={id} onChange={changeId} />
-                    <label className="login_input-email">Email</label>
-                
+            <div className="loginbox_div">
+                <input className="login_input" value={id} onChange={changeId} />
+                {/* <label className="input_text">Email</label> */}
                 <input className="login_input" type="text" onChange={handleChange} />
             </div>
+            
             <div className="div_checkbox">
                 <div><input  className="checkbox_id-remember" type="checkbox" onChange={handleOnChange} checked={isRemember}/><p>아이디 기억하기</p></div>
                 <span>비밀번호를 잊으셨나요?</span>
             </div>
             <div className="login_div">
-                <button onClick={Login}>로그인</button>
+                <button type="button" onClick={()=>setPopup(!Popup)}>로그인</button>
             </div>
+            {Popup === true?<Popup/>:null}
             <div className="login_div-newAccount">
                 <p>계정이 없으신가요?</p>
                 <Link to={"/join"}><span>&nbsp;&nbsp;&nbsp;회원가입하기</span></Link>
