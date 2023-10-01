@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../css/Login.css"
 import "../css/common.css"
-import GoogleAuthLogin from "./GoogleAuthLogin"
+import GoogleAuthLogin from "../components/GoogleAuthLogin"
 import { Link } from "react-router-dom";
-import Popup from './LoginPopup';
+import Modal from "../components/Modal";
+import styled from "styled-components";
+
 
 //사용자 정보 관리 모듈
 import { createAction, handleActions } from "redux-actions";
@@ -14,11 +16,14 @@ import axios from 'axios';
 //id 기억하기
 import { useCookies } from 'react-cookie';
 import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
-import { Modal } from "react-bootstrap";
 
 function Login(){
+    //modal
+    const [isOpen, setOpen] = useState(false);
+    const onClick = () => {
+        setOpen(true);
+    };
 
-    //id
     const [id, setId] = useState("");
     //Id 기억하기
     const [isRemember, setIsRemember] = useState(false);
@@ -73,8 +78,11 @@ function Login(){
             </div>
             <div className="login_div">
                 <button type="button" onClick={()=>setPopup(!Popup)}>로그인</button>
+                <AppWrap>
+                    <Button onClick={onClick}>open modal</Button>
+                    {isOpen && (<Modal open={isOpen}onClose={() => {setOpen(false);}}/>)}
+                </AppWrap>
             </div>
-            {Popup === true?<Popup/>:null}
             <div className="login_div-newAccount">
                 <p>계정이 없으신가요?</p>
                 <Link to={"/join"}><span>&nbsp;&nbsp;&nbsp;회원가입하기</span></Link>
@@ -83,5 +91,25 @@ function Login(){
         </div>
     );
 }
+
+const Button = styled.button`
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #fa9f98;
+  border-radius: 10px;
+  color: white;
+  font-style: italic;
+  font-weight: 200;
+  cursor: pointer;
+  &:hover {
+    background-color: #fac2be;
+  }
+`;
+
+const AppWrap = styled.div`
+  text-align: center;
+  margin: 50px auto;
+`;
 
 export default Login;
