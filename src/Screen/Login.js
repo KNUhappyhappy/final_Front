@@ -21,7 +21,15 @@ function Login(){
     //modal
     const [isOpen, setOpen] = useState(false);
     const onClick = () => {
-        setOpen(true);
+        var id = document.getElementById('id');
+        var pw = document.getElementById('pw');
+        if(id.value === ""){
+            console.log("아이디를 입력해주세요");
+        }else if(pw.value === ""){
+            console.log("비밀번호를 입력해주세요");
+        }    else{
+            setOpen(true);
+        }
     };
 
     const [id, setId] = useState("");
@@ -67,9 +75,9 @@ function Login(){
                 <p>OR</p>
             </div>
             <div className="loginbox_div">
-                <input className="login_input" value={id} onChange={changeId} />
+                <input className="login_input" id="id" value={id} onChange={changeId} />
                 {/* <label className="input_text">Email</label> */}
-                <input className="login_input" type="text" onChange={handleChange} />
+                <input className="login_input" id="pw" type="text" onChange={handleChange} />
             </div>
             
             <div className="div_checkbox">
@@ -80,7 +88,7 @@ function Login(){
                 <button type="button" onClick={()=>setPopup(!Popup)}>로그인</button>
                 <AppWrap>
                     <Button onClick={onClick}>open modal</Button>
-                    {isOpen && (<Modal open={isOpen}onClose={() => {setOpen(false);}}/>)}
+                    {isOpen && (<Modal open={isOpen} onClose={() => {setOpen(false);}}/>)}
                 </AppWrap>
             </div>
             <div className="login_div-newAccount">
