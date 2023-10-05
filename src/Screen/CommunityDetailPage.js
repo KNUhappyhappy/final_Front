@@ -1,9 +1,16 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 
+//커뮤니티에서 작성된 글을 클릭했을 때 나오는 페이지
+
 import "../css/CommunityDetailPage.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { IconName } from "react-icons/ai";
+import {
+  BsHandThumbsUp,
+  BsHandThumbsUpF,
+  BsHandThumbsD,
+  BsHandThumbsDown,
+} from "react-icons/bs";
 import {
   AiOutlineShareAlt,
   AiOutlineMore,
@@ -116,12 +123,33 @@ function CommunityDetailContents() {
 }
 
 function CommunityDetailComments() {
+  const [upCountNum, setupCountNum] = useState(0); //추천
+  const [downCountNum, setDownCountNum] = useState(0); //비추천
+
+  const handleUpClick = () => {
+    // 추천 클릭 시 upCountNum 상태를 +1 업데이트
+    setupCountNum(upCountNum + 1);
+  };
+
+  const handleDownClick = () => {
+    // 비추천 클릭 시 downCountNum 상태를 +1 업데이트
+    setDownCountNum(downCountNum + 1);
+  };
+
   return (
     <>
       <div className="CommunityDetailComments">
         <div className="CommunityDetailCommentsInner">
-          <div className="CommunityDetailCommentsRecommend"></div>
-          <div className="CommunityDetailCommentsTotal"></div>
+          <div className="CommunityDetailCommentsRecommend">
+            <span></span>
+            <BsHandThumbsUp className="UpIcon" onClick={handleUpClick} />
+            <span className="RecoommandNum">{upCountNum}</span>
+            <BsHandThumbsDown className="DownIcon" onClick={handleDownClick} />
+            <span className="RecoommandNum">{downCountNum}</span>
+          </div>
+          <div className="CommunityDetailCommentsTotal">
+            <span className="CommentsTotalTitle">댓글</span>
+          </div>
           <div className="CommunityDetailCommentsInputBar">
             <div className="CommunityDetailCommentsProfile"></div>
             <input placeholder="댓글을 작성하세요" />

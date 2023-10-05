@@ -24,7 +24,7 @@
 
 .CommunityDetailContents {
   width: 100%;
-  height: 1600px;
+  height: 1650px;
 }
 
 .CommunityDetailContentsInner {
@@ -157,9 +157,46 @@
 
 /* CommunityDetailContents */
 
+.CommunityDetailCommentsRecommend {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.8fr 0.05fr 0.05fr 0.05fr 0.05fr;
+  justify-items: center;
+}
+
+.UpIcon,
+.DownIcon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.UpIcon:active,
+.DownIcon:active {
+  color: var(--sub_color);
+}
+
+.RecoommandNum {
+  font-size: 16px;
+}
+
+/* CommunityDetailCommentsRecommend */
+
+.CommunityDetailCommentsTotal {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 18px;
+}
+
+/* CommunityDetailCommentsTotal */
+
 .CommunityDetailComments {
   width: 100%;
-  height: 800px;
+  height: 750px;
 }
 
 .CommunityDetailCommentsInner {

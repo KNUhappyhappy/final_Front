@@ -2,7 +2,6 @@
 
 import { Link } from "react-router-dom";
 import "../css/Community.css";
-import { IconName } from "react-icons/ai";
 import { AiOutlineDown, AiTwotoneLike, AiOutlineLike } from "react-icons/ai";
 import { BsChatLeftText } from "react-icons/bs";
 import Carousel from "react-bootstrap/Carousel";
@@ -15,11 +14,34 @@ import React, { createContext, useState, useEffect } from "react";
 
 function CommunityExplore() {
   const [postIndex, setPostIndex] = useState(1); // 초기값 1로 설정
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false); //최신순, 인기순 드롭다운
+  const [sortBy, setSortBy] = useState("latest"); // 드롭다운 정렬 옵션 상태, 초기값은 "최신순"
 
   const handleDropdownClick = () => {
+    //드롭다운메뉴 클릭 시
     setShowDropdown(!showDropdown);
   };
+
+  // 정렬 옵션 클릭 이벤트 핸들러
+  const handleSortOptionClick = (option) => {
+    setSortBy(option); // 선택한 정렬 옵션을 상태에 저장
+    setShowDropdown(false); // 드롭다운 메뉴 닫기
+  };
+
+  //   // CommunityExplore 함수 내의 handleSortOptionClick 함수 수정
+  // const handleSortOptionClick = (option) => {
+  //   if (option === "popularity") {
+  //     // "인기순" 클릭 시, 게시물을 인기순으로 정렬
+  //     const sortedPostIndex = [...Array(6).keys()].sort((a, b) => {
+  //       return likeRandomNumber[b] - likeRandomNumber[a];
+  //     });
+  //     setPostIndex(sortedPostIndex);
+  //   } else {
+  //     // "최신순" 클릭 시, 게시물을 초기 정렬로 설정
+  //     setPostIndex(1);
+  //   }
+  //   setShowDropdown(false); // 드롭다운 메뉴 닫기
+  // };
 
   return (
     <>
@@ -40,12 +62,30 @@ function CommunityExplore() {
                   onClick={handleDropdownClick}
                   className="CommunityExploreSelect"
                 >
-                  최신순
+                  {sortBy === "popularity" ? "인기순" : "최신순"}
+                  {/* 인기순 또는 최신순으로 표시 */}
                   <AiOutlineDown className="AiOutlineDown" />
                   {showDropdown && (
                     <div className="CommunityExploreDropdownMenu">
-                      <span className="Popularity">인기순</span>
-                      <span className="Latest">최신순</span>
+                      {/* "인기순" 클릭 이벤트 핸들러와 "최신순" 클릭 이벤트 핸들러를 연결 */}
+                      <span
+                        className={
+                          sortBy === "popularity"
+                            ? "Popularity selected"
+                            : "Popularity"
+                        }
+                        onClick={() => handleSortOptionClick("popularity")}
+                      >
+                        인기순
+                      </span>
+                      <span
+                        className={
+                          sortBy === "latest" ? "Latest selected" : "Latest"
+                        }
+                        onClick={() => handleSortOptionClick("latest")}
+                      >
+                        최신순
+                      </span>
                     </div>
                   )}
                 </span>
