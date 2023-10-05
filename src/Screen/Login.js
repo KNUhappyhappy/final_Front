@@ -24,15 +24,20 @@ function Login(){
         var id = document.getElementById('id');
         var pw = document.getElementById('pw');
         if(id.value === ""){
+            id.style.border='1px solid red';
             console.log("아이디를 입력해주세요");
-        }else if(pw.value === ""){
+        }
+        if(pw.value === ""){
             console.log("비밀번호를 입력해주세요");
-        }    else{
+            pw.style.border='1px solid red';
+        }
+        if(id.value !== "" && pw.value !== ""){
             setOpen(true);
         }
     };
-
+    
     const [id, setId] = useState("");
+    const [pw, setPw] = useState("");
     //Id 기억하기
     const [isRemember, setIsRemember] = useState(false);
     const [cookies, setCookie, removeCookie] = useCookies(['rememberId']);
@@ -48,17 +53,24 @@ function Login(){
     }
 
     const changeId = (e) => {
+        var id = document.getElementById('id');
         setId(e.target.value);
+        id.style.border='';
     }
 
-    const handleOnChange = (e) => {
-        setIsRemember(e.target.check);
-        if(e.target.check){
-            setCookie('rememberId', id, {maxAge: 2000});
-        }else{
-            removeCookie('rememberId');
-        }
+    const changePw = (e) =>{
+        var pw = document.getElementById('pw');
+        setPw(e.target.value);
+        pw.style.border='';
     }
+    // const changePw = (e) => {
+    //     setIsRemember(e.target.check);
+    //     if(e.target.check){
+    //         setCookie('rememberId', id, {maxAge: 2000});
+    //     }else{
+    //         removeCookie('rememberId');
+    //     }
+    // }
 
     return(
         <div className="login_main">
@@ -75,21 +87,18 @@ function Login(){
                 <p>OR</p>
             </div>
             <div className="loginbox_div">
-                <input className="login_input" id="id" value={id} onChange={changeId} />
+                <input className="login_input" id="id" type="text" value={id} onChange={changeId} />
                 {/* <label className="input_text">Email</label> */}
-                <input className="login_input" id="pw" type="text" onChange={handleChange} />
+                <input className="login_input" id="pw" type="text" onChange={changePw} />
             </div>
             
             <div className="div_checkbox">
-                <div><input  className="checkbox_id-remember" type="checkbox" onChange={handleOnChange} checked={isRemember}/><p>아이디 기억하기</p></div>
+                <div><input  className="checkbox_id-remember" type="checkbox" onChange={handleChange} checked={isRemember}/><p>아이디 기억하기</p></div>
                 <span>비밀번호를 잊으셨나요?</span>
             </div>
             <div className="login_div">
-                <button type="button" onClick={()=>setPopup(!Popup)}>로그인</button>
-                <AppWrap>
-                    <Button onClick={onClick}>open modal</Button>
-                    {isOpen && (<Modal open={isOpen} onClose={() => {setOpen(false);}}/>)}
-                </AppWrap>
+                <button type="button" onClick={onClick}>로그인</button>
+                {isOpen && (<Modal open={isOpen} onClose={() => {setOpen(false);}}/>)}
             </div>
             <div className="login_div-newAccount">
                 <p>계정이 없으신가요?</p>
@@ -99,25 +108,5 @@ function Login(){
         </div>
     );
 }
-
-const Button = styled.button`
-  font-size: 14px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #fa9f98;
-  border-radius: 10px;
-  color: white;
-  font-style: italic;
-  font-weight: 200;
-  cursor: pointer;
-  &:hover {
-    background-color: #fac2be;
-  }
-`;
-
-const AppWrap = styled.div`
-  text-align: center;
-  margin: 50px auto;
-`;
 
 export default Login;
