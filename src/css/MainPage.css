@@ -1,7 +1,9 @@
+@import "common.css";
+
 .MainPage {
   width: 100%;
-  height: 231rem;
-  display: inline-flex;
+  height: 296rem;
+  /* display: inline-flex; */
   padding-left: 0;
   flex-direction: column;
   justify-content: flex-end;
@@ -322,6 +324,25 @@
 }
 
 /* MainIntro */
+
+.MainReview {
+  width: 100%;
+  height: 65rem;
+}
+
+.MainReviewInner {
+  padding: 8rem 0;
+  margin: 0 auto;
+  width: 65%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.MainReviewIntro {
+  margin-bottom: 6rem;
+}
+
+/* MainReview */
 
 .MainCountry {
   width: 100%;

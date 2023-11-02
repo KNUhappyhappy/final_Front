@@ -5,6 +5,7 @@ import "../css/MainPage.css";
 import MainSearch from "../components/MainSearch";
 import MainIntro from "../components/MainIntro";
 import MainCountry from "../components/MainCountry";
+import MainReview from "../components/MainReview";
 
 function MainPage() {
   return (
@@ -13,6 +14,7 @@ function MainPage() {
         <div className="MainPageInner">
           <MainSearch />
           <MainIntro />
+          <MainReview />
           <MainCountry />
         </div>
       </div>
