@@ -331,7 +331,7 @@
 }
 
 .MainReviewInner {
-  padding: 8rem 0;
+  padding: 6.5rem 0;
   margin: 0 auto;
   width: 65%;
   height: 100%;
@@ -340,6 +340,17 @@
 
 .MainReviewIntro {
   margin-bottom: 6rem;
+}
+
+.MainReviewIntroSub {
+  margin-bottom: 5rem;
+}
+
+.CaroueslCard {
+  height: 350px;
+  background-color: #eee;
+  border-radius: 50px;
+  padding: 3rem 3rem;
 }
 
 /* MainReview */
