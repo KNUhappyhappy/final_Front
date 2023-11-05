@@ -102,7 +102,10 @@ function CommunityWritingPage() {
               <div className="CommunityWritingBannerImgBox">
                 <span>배너 이미지를 등록해주세요!</span>
                 <div className="ImgAttachBtn">
-                  <button>첨부하기</button>
+                  <label for="file">
+                    <div class="btn-upload">이미지 첨부하기</div>
+                  </label>
+                  <input type="file" name="file" id="file"></input>
                   {/* 첨부하기 버튼 클릭 시 내 컴퓨터 파일이 열림 */}
                 </div>
               </div>

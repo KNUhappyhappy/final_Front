@@ -69,13 +69,34 @@
   width: 14%;
   height: 45px;
   margin-top: 30px;
-  border: 1px solid #b0b0b0;
+  /* border: 1px solid #b0b0b0; */
   font-size: 14px;
   box-sizing: border-box;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.btn-upload {
+  width: 150px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid rgb(77, 77, 77);
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background: rgb(77, 77, 77);
+    color: #fff;
+  }
+}
+
+#file {
+  display: none;
 }
 
 /* CommunityWritingBanner */
