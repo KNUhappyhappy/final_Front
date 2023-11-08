@@ -3,7 +3,7 @@
 //커뮤니티에서 작성된 글을 클릭했을 때 나오는 페이지
 
 import "../css/CommunityDetailPage.css";
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import {
   BsHandThumbsUp,
@@ -17,6 +17,8 @@ import {
   AiFillEdit,
   AiOutlineDelete,
 } from "react-icons/ai";
+import CommentInput from "../components/CommentInput";
+import Comment from "../components/Comment";
 
 function CommunityDetailPage() {
   return (
@@ -136,6 +138,30 @@ function CommunityDetailComments() {
     setDownCountNum(downCountNum + 1);
   };
 
+  const [comments, setComments] = useState([
+    //댓글창 세팅 초기화
+    { id: 1, name: "Minjoo Park", content: "I like it!" },
+  ]);
+
+  const [like, setLike] = useState(0); //좋아요 버튼구현
+
+  const nextId = useRef(1);
+
+  const onInsert = useCallback(
+    (name, content) => {
+      const comment = {
+        id: nextId.current,
+        name,
+        content,
+      };
+      console.log(name);
+      console.log(content);
+      setComments((comments) => comments.concat(comment));
+      nextId.current += 1; //nextId 1씩 더하기
+    },
+    [comments]
+  );
+
   return (
     <>
       <div className="CommunityDetailComments">
@@ -155,6 +181,21 @@ function CommunityDetailComments() {
             <input placeholder="댓글을 작성하세요" />
             <button className="CommentsBtn">작성</button>
           </div>
+
+          <CommentInput onInsert={onInsert} />
+          <div style={{ marginBottom: "4rem" }}>
+            {comments.map((comment) => {
+              return (
+                <Comment
+                  key={comment.id}
+                  id={comment.id}
+                  name={comment.name}
+                  content={comment.content}
+                />
+              );
+            })}
+          </div>
+
           <div className="CommunityDetailCommentsLists"></div>
         </div>
       </div>
