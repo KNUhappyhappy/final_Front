@@ -350,7 +350,7 @@
   height: 350px;
   background-color: #eee;
   border-radius: 50px;
-  padding: 3rem 3rem;
+  padding: 3.5rem 3.5rem;
 }
 
 .CarouselBtn {
@@ -363,6 +363,7 @@
 }
 
 .CaroueslCardInner {
+  height: 100%;
   display: grid;
   grid-template-columns: 0.5fr 1.5fr;
   text-align: left;
@@ -380,7 +381,27 @@
 
 .CaroueslCardDetail {
   display: grid;
-  grid-template-rows: 0.3fr 1fr 0.5fr 1fr;
+  grid-template-rows: 0.3fr 0.8fr 1fr;
+}
+
+.nickname,
+.Nation,
+.SafetyReview {
+  text-align: left !important;
+}
+
+.ReviewBox1 {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+}
+
+.nickname,
+.Nation {
+  font-size: 1.8rem;
+}
+
+.SafetyReview {
+  font-size: 1.3rem;
 }
 
 /* MainReview */

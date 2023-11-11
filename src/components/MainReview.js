@@ -31,9 +31,16 @@ function Carousel() {
   const ARRAY = [0, 1, 2, 3, 4];
 
   function Rating() {
-    const [clicked, setClicked] = useState([false, false, false, false, false]);
+    const getRandomBooleanArray = () => {
+      const randomStars = Math.floor(Math.random() * 3) + 3; // 3부터 5까지 랜덤 별 수
+      const stars = new Array(5).fill(false).fill(true, 0, randomStars);
+      return stars.sort(() => Math.random() - 0.5);
+    };
+
+    const [clicked, setClicked] = useState(getRandomBooleanArray());
 
     const handleStarClick = (index) => {
+      //별을 클릭 했을 시
       let clickStates = [...clicked];
       for (let i = 0; i < 5; i++) {
         clickStates[i] = i <= index ? true : false;
@@ -41,19 +48,15 @@ function Carousel() {
       setClicked(clickStates);
     };
 
-    useEffect(() => {
-      sendReview();
-    }, [clicked]); //컨디마 컨디업
-
     const sendReview = () => {
       let score = clicked.filter(Boolean).length;
       // fetch('http://52.78.63.175:8000/movie', {
       //   method: 'POST',
       //   Headers: {
-      //     Authroization: 'e7f59ef4b4900fe5aa839fcbe7c5ceb7',
+      //     Authorization: 'e7f59ef4b4900fe5aa839fcbe7c5ceb7',
       //   },
       //   body: JSON.stringify({
-      //     movie_id:1
+      //     movie_id: 1,
       //     star: score,
       //   }),
       // });
@@ -68,7 +71,7 @@ function Carousel() {
                 key={idx}
                 size="50"
                 onClick={() => handleStarClick(el)}
-                className={clicked[el] && "yellowStar"}
+                className={clicked[el] ? "yellowStar" : ""}
               />
             );
           })}
@@ -103,14 +106,20 @@ function Carousel() {
               <img src="" alt="prodileImg" />
             </div>
             <div className="CaroueslCardDetail">
-              <span className="nickname">TravelLover101</span>
+              <div className="ReviewBox1">
+                <span className="nickname">TravelLover101</span>
+                <span className="Nation">프랑스</span>
+              </div>
               <Rating />
-              <span className="Nation">프랑스</span>
               <span className="SafetyReview">
                 생생한 문화와 역사를 체험할 수 있는 프랑스에서의 여행은 정말
-                멋진 경험이었습니다. 그러나, 주요 관광지에서는 소매치기를
-                조심해야 하며, 밤늦은 시간에는 가능하면 관광지 주변을 피하는
-                것이 좋습니다. 전반적으로 안전하게 여행을 즐길 수 있었습니다."
+                멋진 경험이었습니다.
+                <br />
+                그러나, 주요 관광지에서는 소매치기를 조심해야 하며,
+                <br />
+                밤늦은 시간에는 가능하면 관광지 주변을 피하는 것이 좋습니다.
+                <br />
+                전반적으로 안전하게 여행을 즐길 수 있었습니다.
               </span>
             </div>
           </div>
@@ -121,15 +130,22 @@ function Carousel() {
               <img src="" alt="prodileImg" />
             </div>
             <div className="CaroueslCardDetail">
-              <span className="nickname">SakuraFan88</span>
+              <div className="ReviewBox1">
+                <span className="nickname">SakuraFan88</span>
+                <span className="Nation">일본</span>
+              </div>
               <Rating />
-              <span className="Nation">일본</span>
               <span className="SafetyReview">
-                일본은 깨끗하고 안전한 나라로 여행하기 좋습니다. 대중교통이 잘
-                발달해 있어 이동하기 편리하고, 친절한 사람들이 많아 도움을
-                필요로 할 때 언제든지 도움을 받을 수 있었습니다. 그러나, 일본은
-                지진이 잦은 국가이므로, 자연 재해에 대비한 안전 지침을 숙지하고,
-                항상 최신 정보를 확인하는 것이 중요합니다.
+                일본은 깨끗하고 안전한 나라로 여행하기 좋습니다.
+                <br />
+                대중교통이 잘 발달해 있어 이동하기 편리하고, 많아 도움을
+                <br />
+                친절한 사람들이 필요로 할 때 언제든지 도움을 받을 수 있었습니다.
+                <br />
+                그러나, 일본은 지진이 잦은 국가이므로,
+                <br />
+                자연 재해에 대비한 안전 지침을 숙지하고, 항상 최신 정보를
+                확인하는 것이 중요합니다.
               </span>
             </div>
           </div>
@@ -140,14 +156,18 @@ function Carousel() {
               <img src="" alt="prodileImg" />
             </div>
             <div className="CaroueslCardDetail">
-              <span className="nickname">SunSeeker77</span>
+              <div className="ReviewBox1">
+                <span className="nickname">SunSeeker77</span>
+                <span className="Nation">멕시코</span>
+              </div>
               <Rating />
-              <span className="Nation">멕시코</span>
               <span className="SafetyReview">
                 멕시코는 맛있는 음식과 다양한 문화를 경험할 수 있는 훌륭한
-                여행지입니다. 그러나, 일부 지역에서는 범죄율이 높아 주의가
-                필요합니다. 특히 밤에는 안전한 지역에서만 활동하는 것이
-                좋습니다.
+                여행지입니다.
+                <br />
+                그러나, 일부 지역에서는 범죄율이 높아 주의가 필요합니다.
+                <br />
+                특히 밤에는 안전한 지역에서만 활동하는 것이 좋습니다.
               </span>
             </div>
           </div>
@@ -158,14 +178,18 @@ function Carousel() {
               <img src="" alt="prodileImg" />
             </div>
             <div className="CaroueslCardDetail">
-              <span className="nickname">AdventureEnthusiast56</span>
+              <div className="ReviewBox1">
+                <span className="nickname">AdventureEnthusiast56</span>
+                <span className="Nation">호주</span>
+              </div>
               <Rating />
-              <span className="Nation">호주</span>
               <span className="SafetyReview">
                 호주는 다양한 야생 동물과 아름다운 자연을 체험할 수 있는 멋진
-                여행지입니다. 대부분의 지역이 안전하나, 야생 동물을 만날 수 있는
-                지역에서는 주의가 필요합니다. 그 외에는 호주에서의 여행은 매우
-                안전하고 즐거웠습니다.
+                여행지입니다.
+                <br />
+                대부분의 지역이 안전하나, 야생 동물을 만날 수 있는 지역에서는
+                주의가 필요합니다.
+                <br />그 외에는 호주에서의 여행은 매우 안전하고 즐거웠습니다.
               </span>
             </div>
           </div>
@@ -192,15 +216,15 @@ const Stars = styled.div`
     cursor: pointer;
   }
 
-  :hover svg {
-    color: #fcc419;
-  }
-
-  & svg:hover ~ svg {
-    color: gray;
-  }
-
   .yellowStar {
     color: #fcc419;
   }
 `;
+
+// :hover svg {
+//   color: #fcc419;
+// }
+
+// & svg:hover ~ svg {
+//   color: gray;
+// }

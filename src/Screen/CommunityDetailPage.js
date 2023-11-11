@@ -173,14 +173,6 @@ function CommunityDetailComments() {
             <BsHandThumbsDown className="DownIcon" onClick={handleDownClick} />
             <span className="RecoommandNum">{downCountNum}</span>
           </div>
-          <div className="CommunityDetailCommentsTotal">
-            <span className="CommentsTotalTitle">댓글</span>
-          </div>
-          <div className="CommunityDetailCommentsInputBar">
-            <div className="CommunityDetailCommentsProfile"></div>
-            <input placeholder="댓글을 작성하세요" />
-            <button className="CommentsBtn">작성</button>
-          </div>
 
           <CommentInput onInsert={onInsert} />
           <div style={{ marginBottom: "4rem" }}>

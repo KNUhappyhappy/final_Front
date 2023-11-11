@@ -42,22 +42,24 @@ const CommentInput = ({ onInsert }) => {
   );
 
   return (
-    <form className="CommentInsert" onSubmit={onSubmit}>
-      <input
-        classNames="inputNames"
-        placeholder="이름"
-        value={value.name}
-        onChange={onChangeName}
-      />
-      <input
-        className="inputComment"
-        placeholder="댓글"
-        value={value.content}
-        onChange={onChangeContent}
-      />
-      <button type="submit">
-        <MdAdd />
-      </button>
+    <form className="CommunityDetailCommentsTotal" onSubmit={onSubmit}>
+      <div className="CommunityDetailCommentsInputBar">
+        <input
+          classNames="inputNames"
+          placeholder="닉네임"
+          value={value.name}
+          onChange={onChangeName}
+        />
+        <input
+          className="inputComment"
+          placeholder="댓글"
+          value={value.content}
+          onChange={onChangeContent}
+        />
+        <button type="submit" className="CommentsBtn">
+          <MdAdd />
+        </button>
+      </div>
     </form>
   );
 };
