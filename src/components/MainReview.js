@@ -103,7 +103,11 @@ function Carousel() {
         <div className="CaroueslCard">
           <div className="CaroueslCardInner">
             <div className="profileImg">
-              <img src="" alt="prodileImg" />
+              <img
+                className="profileImg"
+                src="images/MainPage/people1.jpg"
+                alt="profileImg"
+              />
             </div>
             <div className="CaroueslCardDetail">
               <div className="ReviewBox1">
@@ -127,7 +131,11 @@ function Carousel() {
         <div className="CaroueslCard">
           <div className="CaroueslCardInner">
             <div className="profileImg">
-              <img src="" alt="prodileImg" />
+              <img
+                className="profileImg"
+                src="images/MainPage/people2.jpg"
+                alt="profileImg"
+              />
             </div>
             <div className="CaroueslCardDetail">
               <div className="ReviewBox1">
@@ -153,7 +161,11 @@ function Carousel() {
         <div className="CaroueslCard">
           <div className="CaroueslCardInner">
             <div className="profileImg">
-              <img src="" alt="prodileImg" />
+              <img
+                className="profileImg"
+                src="images/MainPage/people3.jpg"
+                alt="profileImg"
+              />
             </div>
             <div className="CaroueslCardDetail">
               <div className="ReviewBox1">
@@ -175,7 +187,11 @@ function Carousel() {
         <div className="CaroueslCard">
           <div className="CaroueslCardInner">
             <div className="profileImg">
-              <img src="" alt="prodileImg" />
+              <img
+                className="profileImg"
+                src="images/MainPage/people4.jpg"
+                alt="profileImg"
+              />
             </div>
             <div className="CaroueslCardDetail">
               <div className="ReviewBox1">

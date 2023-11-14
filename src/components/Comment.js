@@ -43,7 +43,7 @@ class Comment extends Component {
     return (
       <div style={styles.root}>
         <div style={styles.imageContainer}>
-          <img src="" alt="" style={styles.image} />
+          <img src="images/MainPage/people5.jpg" alt="" style={styles.image} />
         </div>
         <div style={styles.commentContainer}>
           <div style={styles.nameText}>{name}</div>

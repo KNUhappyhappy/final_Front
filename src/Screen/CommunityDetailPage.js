@@ -140,7 +140,7 @@ function CommunityDetailComments() {
 
   const [comments, setComments] = useState([
     //댓글창 세팅 초기화
-    { id: 1, name: "Minjoo Park", content: "I like it!" },
+    { id: 1, name: "Minho", content: "좋은 정보 감사합니다!" },
   ]);
 
   const [like, setLike] = useState(0); //좋아요 버튼구현
